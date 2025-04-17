@@ -1,0 +1,8 @@
+*.png
+*.col
+*.cpg
+*.dbf
+*.shx
+*.shp
+
+simulation_results/*
