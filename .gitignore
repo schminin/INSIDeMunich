@@ -6,3 +6,4 @@
 *.shp
 
 simulation_results/*
+analysis/scripts/pycache/*
