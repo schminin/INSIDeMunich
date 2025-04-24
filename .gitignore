@@ -6,4 +6,5 @@
 *.shp
 
 simulation_results/*
-analysis/scripts/pycache/*
+analysis/scripts/__pycache__/*
+vscode/settings.json
