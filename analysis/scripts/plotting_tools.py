@@ -28,3 +28,5 @@ manhole_names = {
     "MUC434": "WWT Gut Großlappen",
     "MUC562": "WWT Gut Marienhof",
     "MUC586": "Gesamt",}
+
+start_date = "2020-03-01"
