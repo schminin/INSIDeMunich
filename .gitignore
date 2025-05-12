@@ -1,10 +1,8 @@
 *.png
-*.col
-*.cpg
-*.dbf
-*.shx
-*.shp
 
 simulation_results/*
 analysis/scripts/__pycache__/*
-vscode/settings.json
+.vscode/settings.json
+
+*.xlsx
+*.csv
