@@ -1,49 +1,37 @@
-Date,Comment,Location,Value
-2020-04-16,,"Langrieder 
-Bach",<75
-2020-04-28,,"Langrieder 
-Bach",788.836774751491
-2020-05-05,,"Langrieder 
-Bach",<75
-2020-05-19,,"Langrieder 
-Bach",<75
-2020-05-26,,"Langrieder 
-Bach",<75
-2020-06-01,,"Langrieder 
-Bach",<75
-2020-04-16,,"Gräfelfinger Str. 
-/Waldwiesenstr.",<75
-2020-04-28,,"Gräfelfinger Str. 
-/Waldwiesenstr.",788.836774751491
-2020-05-05,,"Gräfelfinger Str. 
-/Waldwiesenstr.",<75
-2020-05-19,,"Gräfelfinger Str. 
-/Waldwiesenstr.",<75
-2020-05-26,,"Gräfelfinger Str. 
-/Waldwiesenstr.",550.886494183127
-2020-06-01,,"Gräfelfinger Str. 
-/Waldwiesenstr.",<75
-2020-04-16,,Schenkendorfstr.,<75
-2020-04-28,,Schenkendorfstr.,<75
-2020-05-05,,Schenkendorfstr.,<75
-2020-05-19,,Schenkendorfstr.,<75
-2020-05-26,,Schenkendorfstr.,<75
-2020-06-01,,Schenkendorfstr.,<75
-2020-04-16,,Schmidbartlanger ,<75
-2020-04-28,,Schmidbartlanger ,<75
-2020-05-05,,Schmidbartlanger ,222.972348339312
-2020-05-19,,Schmidbartlanger ,465.503069059269
-2020-05-26,,Schmidbartlanger ,<75
-2020-06-01,,Schmidbartlanger ,<75
-2020-04-16,,Savitsstr.,493.270558459034
-2020-04-28,,Savitsstr.,788.836774751491
-2020-05-05,,Savitsstr.,<75
-2020-05-19,,Savitsstr.,671.191009297922
-2020-05-26,,Savitsstr.,<75
-2020-06-01,,Savitsstr.,<75
-2020-04-16,,Gyßling Becken,<75
-2020-04-28,,Gyßling Becken,<75
-2020-05-05,,Gyßling Becken,295.931974542433
-2020-05-19,,Gyßling Becken,<75
-2020-05-26,,Gyßling Becken,<75
-2020-06-01,,Gyßling Becken,<75
+Date,Comment,Location,Value,Below_threshold,Location_Clear
+2020-04-16,,N_Uc,37.5,False,Am Langwieder Bach
+2020-04-28,,N_Uc,788.836774751491,False,Am Langwieder Bach
+2020-05-05,,N_Uc,37.5,False,Am Langwieder Bach
+2020-05-19,,N_Uc,37.5,False,Am Langwieder Bach
+2020-05-26,,N_Uc,37.5,False,Am Langwieder Bach
+2020-06-01,,N_Uc,37.5,False,Am Langwieder Bach
+2020-04-16,,S_Ua,37.5,False,Gräfelfinger Str.
+2020-04-28,,S_Ua,788.836774751491,False,Gräfelfinger Str.
+2020-05-05,,S_Ua,37.5,False,Gräfelfinger Str.
+2020-05-19,,S_Ua,37.5,False,Gräfelfinger Str.
+2020-05-26,,S_Ua,550.886494183127,False,Gräfelfinger Str.
+2020-06-01,,S_Ua,37.5,False,Gräfelfinger Str.
+2020-04-16,,S_M4,37.5,False,Schenkendorfstr.
+2020-04-28,,S_M4,37.5,False,Schenkendorfstr.
+2020-05-05,,S_M4,37.5,False,Schenkendorfstr.
+2020-05-19,,S_M4,37.5,False,Schenkendorfstr.
+2020-05-26,,S_M4,37.5,False,Schenkendorfstr.
+2020-06-01,,S_M4,37.5,False,Schenkendorfstr.
+2020-04-16,,N_Ub,37.5,False,Schmidbartlangerstr.
+2020-04-28,,N_Ub,37.5,False,Schmidbartlangerstr.
+2020-05-05,,N_Ub,222.972348339312,False,Schmidbartlangerstr.
+2020-05-19,,N_Ub,465.503069059269,False,Schmidbartlangerstr.
+2020-05-26,,N_Ub,37.5,False,Schmidbartlangerstr.
+2020-06-01,,N_Ub,37.5,False,Schmidbartlangerstr.
+2020-04-16,,E_M,493.270558459034,False,Savitstr.
+2020-04-28,,E_M,788.836774751491,False,Savitstr.
+2020-05-05,,E_M,37.5,False,Savitstr.
+2020-05-19,,E_M,671.191009297922,False,Savitstr.
+2020-05-26,,E_M,37.5,False,Savitstr.
+2020-06-01,,E_M,37.5,False,Savitstr.
+2020-04-16,,S_M3,37.5,False,Gyßlinger Becken
+2020-04-28,,S_M3,37.5,False,Gyßlinger Becken
+2020-05-05,,S_M3,295.931974542433,False,Gyßlinger Becken
+2020-05-19,,S_M3,37.5,False,Gyßlinger Becken
+2020-05-26,,S_M3,37.5,False,Gyßlinger Becken
+2020-06-01,,S_M3,37.5,False,Gyßlinger Becken
