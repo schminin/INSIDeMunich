@@ -28,7 +28,9 @@ dpi = 96 # dpi for google slides
 
 colors = {'Black': '#000000', 'Dark grey': '#595959', 'Medium grey': '#a2a2a2', 'Light grey': '#cccccc', 'Very light grey': '#eeeeee', 'White': '#ffffff', 'Dark red': '#980000', 'Red': '#d41e1e', 'Orange': '#ef8636', 'Muted orange': '#efa94b', 'Yellow': '#ffe575', 'Brown': '#996633', 'Dark green': '#83af63', 'Light green': '#bfd767', 'Cadet blue': '#74a1a3', 'Dark blue': '#1c4587', 'Blue': '#3b75af', 'Light blue': '#cfe2f3'}
 loctype_to_color_dict = { 'Home' : colors['Brown'], 'Recreation' : colors['Light green'], 'Work' : colors['Blue'], 'School': colors['Orange'], 'Shop': colors['Dark red'], 'Hospital': colors['Dark grey'], 'ICU': colors['Medium grey']}
+ag_to_color_dict = {'0-4': colors['Brown'], '5-15': colors['Light green'], '16-34': colors['Blue'], '35-59': colors['Orange'], '60-79': colors['Dark red'], '80+': colors['Dark grey']}
 idx_to_loctype_dict = { 0: 'Home', 1: 'School', 3: 'Recreation', 2: 'Work', 4: 'Shop', 5: 'Hospital', 6: 'ICU', 10: "Cemetery"}
+age_groups = ['0-4', '5-15', '16-34', '35-59', '60-79', '80+']
 idx_to_age_group = {0: '0-4', 1: '5-15', 2: '16-34', 3: '35-59', 4: '60-79', 5: '80+'}
 cmap = 'viridis_r'
 
