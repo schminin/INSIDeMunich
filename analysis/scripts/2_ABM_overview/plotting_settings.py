@@ -5,6 +5,9 @@ import matplotlib.gridspec as gridspec
 import pandas as pd
 import geopandas
 import numpy as np
+import matplotlib.colors as mcolors
+from matplotlib.ticker import ScalarFormatter
+from datetime import datetime, timedelta
 
 matplotlib.pyplot.style.use('default')
 fontsize = 15
@@ -18,17 +21,11 @@ matplotlib.rcParams.update({
 	'font.family': 'Arial'
 })
 
-# Settings for Figure a)
-width_a_in_in = 4.1 # Figure width in inch
-height_a_in_in = 2.6 # Figure height in inch
-axes_width_a = 0.1 # Width of the axes and the ticks
-length_tick_lines_a = 1 # Length of the tick lines
-dpi = 96 # dpi for google slides
+dpi = 300 # dpi for google slides
 
-
-colors = {'Black': '#000000', 'Dark grey': '#595959', 'Medium grey': '#a2a2a2', 'Light grey': '#cccccc', 'Very light grey': '#eeeeee', 'White': '#ffffff', 'Dark red': '#980000', 'Red': '#d41e1e', 'Orange': '#ef8636', 'Muted orange': '#efa94b', 'Yellow': '#ffe575', 'Brown': '#996633', 'Dark green': '#83af63', 'Light green': '#bfd767', 'Cadet blue': '#74a1a3', 'Dark blue': '#1c4587', 'Blue': '#3b75af', 'Light blue': '#cfe2f3'}
-loctype_to_color_dict = { 'Home' : colors['Brown'], 'Recreation' : colors['Light green'], 'Work' : colors['Blue'], 'School': colors['Orange'], 'Shop': colors['Dark red'], 'Hospital': colors['Dark grey'], 'ICU': colors['Medium grey']}
-ag_to_color_dict = {'0-4': colors['Brown'], '5-15': colors['Light green'], '16-34': colors['Blue'], '35-59': colors['Orange'], '60-79': colors['Dark red'], '80+': colors['Dark grey']}
+colors = {'Black': '#000000', 'Dark grey': '#595959', 'Medium grey': '#a2a2a2', 'Light grey': '#cccccc', 'Very light grey': '#eeeeee', 'White': '#ffffff', 'Green': '#83af63', 'Dark red': '#8B0000', 'Orange': '#ef8636', 'Blue': '#3b75af', 'Purple': '#874C82', 'Brown': '#8B4513', 'Tan': '#C68B70', 'Teal': '#4c8670', 'Dark green': '#2F4F4F'}
+loctype_to_color_dict = { 'Home' : colors['Blue'], 'Recreation' : colors['Dark green'], 'Work' : colors['Medium grey'], 'School': colors['Teal'], 'Shop': colors['Purple'], 'Hospital': colors['Dark grey'], 'ICU': colors['Medium grey']}
+ag_to_color_dict = {'0-4': colors['Blue'], '5-15': colors['Dark green'], '16-34': colors['Brown'], '35-59': colors['Teal'], '60-79': colors['Purple'], '80+': colors['Green']}
 idx_to_loctype_dict = { 0: 'Home', 1: 'School', 3: 'Recreation', 2: 'Work', 4: 'Shop', 5: 'Hospital', 6: 'ICU', 10: "Cemetery"}
 age_groups = ['0-4', '5-15', '16-34', '35-59', '60-79', '80+']
 idx_to_age_group = {0: '0-4', 1: '5-15', 2: '16-34', 3: '35-59', 4: '60-79', 5: '80+'}
@@ -64,5 +61,18 @@ def lighten_color(color, amount):
     c = colorsys.rgb_to_hls(*mc.to_rgb(c))
     return colorsys.hls_to_rgb(c[0], max(0, min(1, amount * c[1])), c[2])
 
-ww_data_shp_file = 'Verschnitt_DLR_TAN_Rep.shp'
-person_file = 'persons_final_corr.csv'
+
+class Log1pNorm(mcolors.Normalize):
+    def __init__(self, vmin=None, vmax=None):
+        super().__init__(vmin=vmin, vmax=vmax)
+
+    def __call__(self, value, clip=None):
+        log_val = np.log1p(value)  # log(x+1)
+        log_vmin = np.log1p(self.vmin)
+        log_vmax = np.log1p(self.vmax)
+        return (log_val - log_vmin) / (log_vmax - log_vmin)
+
+    def inverse(self, value):
+        log_vmin = np.log1p(self.vmin)
+        log_vmax = np.log1p(self.vmax)
+        return np.expm1(value * (log_vmax - log_vmin) + log_vmin)
