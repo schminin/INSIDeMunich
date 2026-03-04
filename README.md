@@ -32,6 +32,8 @@ Additionally to the different output functions, there is a postprocessing script
 | calculate_agents_per_quantity            | This function outputs two txt files:                                            |
 |                                          | 1. *num_agents_loctype.txt* contains the total number of agents resolved by time step and location type.                                                                                                                        |
 |                                          | 2. *num_agents_area.txt* contains the total number of agents resolved by time step and wastewater area. This file was used for Main Fig. 2e (e_mobility_visualization.ipynb).                                                                                    |
+| calculate_agents_per_area_inhabitants_commuters | This function outputs a file *{sim_num}_num_agents_area_inhabitants_commuters.txt* that contains the number of agents, the number of inhabitants and the number of commuters (agents that have their home location in another wastewater area) per wastewater area and time point.                                   |
+| calculate_infected_per_measurement_station | This function outputs a file *infection_age_shedding_{timepoint}_{measurement_station}.csv* that contains the infection age (in hours) and the shedding value for all infected agents at a given measurement station and time point. The function requires the mapping of wastewater areas to measurement station as input which can be found under `preprocessing/preprocesses_data/tandler_upstream_gebiete.json`.       |
 
 #### Sensitivity analysis infection dynamics model
 
